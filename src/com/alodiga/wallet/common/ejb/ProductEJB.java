@@ -88,7 +88,7 @@ public interface ProductEJB extends WalletGenericEJB {
    public TransactionApproveRequest saveTransactionApproveRequest(TransactionApproveRequest transactionApproveRequest) throws RegisterNotFoundException, NullParameterException, GeneralException;
    public List<StatusTransactionApproveRequest> getStatusTransactionApproveRequests(EJBRequest request) throws GeneralException, EmptyListException, NullParameterException;   
    public StatusTransactionApproveRequest loadStatusTransactionApproveRequestbyCode(EJBRequest request)throws RegisterNotFoundException, NullParameterException, GeneralException;
-   public TransactionApproveRequest updateTransactionApproveRequest(TransactionApproveRequest transactionApproveRequest)throws RegisterNotFoundException, NullParameterException, GeneralException, NegativeBalanceException;   
+   public TransactionApproveRequest updateTransactionApproveRequest(TransactionApproveRequest transactionApproveRequest, String movilPhone)throws RegisterNotFoundException, NullParameterException, GeneralException, NegativeBalanceException;   
    public BalanceHistory saveBalanceHistory(BalanceHistory balancehistory) throws GeneralException, NullParameterException;
 
 }
