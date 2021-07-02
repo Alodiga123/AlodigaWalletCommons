@@ -78,6 +78,8 @@ public class Person extends AbstractWalletEntity implements Serializable {
     private PhonePerson phonePerson;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "personId")
     private LegalPerson legalPerson;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "personId")
+    private LegalRepresentative legalRepresentative;
     @JoinColumn(name = "countryId", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Country countryId;
@@ -93,8 +95,6 @@ public class Person extends AbstractWalletEntity implements Serializable {
     private ReviewOfac reviewOfac;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "personId")
     private PersonHasAddress personHasAddress;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "personId")
-    private LegalRepresentative legalRepresentative;
     
     public Person() {
     }
